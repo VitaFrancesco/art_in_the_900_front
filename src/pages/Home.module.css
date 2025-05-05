@@ -1,0 +1,188 @@
+.containerHero {
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: space-between;
+    background-color: aliceblue;
+    mask-image: linear-gradient(to bottom,
+            /* rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 20%, */
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0));
+}
+
+.heroShower {
+    height: 100vh;
+}
+
+section:not(:first-child) {
+    background-color: aliceblue;
+    position: relative;
+    z-index: 2;
+}
+
+.containerHero>img {
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    height: 100vh;
+}
+
+.hero {
+    background-color: rgba(174, 202, 227, 0.5);
+    backdrop-filter: blur(2px);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+    h1 {
+        font-family: "Antic Didone", serif;
+        ;
+        font-weight: 400;
+        font-size: clamp(35px, 5vw, 200px);
+    }
+
+    h2 {
+        text-transform: uppercase;
+    }
+}
+
+.attractiveInfo {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: rgb(207, 204, 204);
+    box-shadow: 2px 3px 5px rgb(207, 204, 204);
+    border-radius: 50px;
+    padding: 10px 15px;
+    width: fit-content;
+}
+
+.profiles {
+    display: flex;
+
+    div {
+        background-color: grey;
+        width: 30px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+
+    div:not(:last-child) {
+        margin-right: -15px;
+    }
+}
+
+.linkContainer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    padding: 90px 30px 50px;
+    margin: auto;
+}
+
+.linkContainer a {
+    width: calc(100% / 3);
+    padding: 15px;
+}
+
+.cardLink {
+    border-radius: 16px;
+    width: 100%;
+    min-height: 350px;
+    height: 70vh;
+    max-height: 600px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px rgb(191, 206, 218);
+
+    h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        font-size: 34px;
+        color: white;
+    }
+
+    img {
+        object-fit: cover;
+        object-position: center;
+        transition: all 0.3s linear;
+        z-index: 0;
+        position: relative;
+        height: 100%;
+    }
+}
+
+.cardLink:hover img {
+    transform: scale(1.2);
+}
+
+.sectionMovementsCta {
+    padding: 50px 30px 90px;
+}
+
+.movementsCta {
+    padding: 18px;
+    max-width: 1500px;
+    margin: auto;
+    text-align: center;
+    border-radius: 16px;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 15px;
+        font-size: clamp(14px, 1.6vw, 18px);
+    }
+
+    p:last-of-type {
+        margin-bottom: 45px
+    }
+}
+
+@media (max-width: 768px) {
+
+    .containerHero {
+        justify-content: center;
+    }
+
+    .hero {
+        transform: scale(1);
+        padding: 0 20px;
+        flex-shrink: 1;
+        height: calc(50vh - 67px);
+        min-height: 350px;
+    }
+
+    .linkContainer a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cardLink {
+        max-width: 400px;
+        aspect-ratio: 1 / 1.4;
+    }
+}
