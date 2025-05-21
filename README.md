@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" width="100" alt="React Logo" />
-</p>
-
 <h1 align="center">Arte '900 – Frontoffice</h1>
 
 <p align="center">
